@@ -1,7 +1,7 @@
 {
-  "name": "A Getting Started Example",
+  "name": "AuthorIdentity",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "Add AuthorIdentity for MoneyButton!",
   "background": {
     "scripts": ["bsv.min.js","bsv-message.min.js","background.js"],
     "persistent": false
