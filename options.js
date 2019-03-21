@@ -4,7 +4,7 @@ chrome.storage.local.get('key',(keys)=>{
 })
 function linkTo(key) {
     var addr = bsv.Address.fromPrivateKey(bsv.PrivateKey.fromWIF(key)).toString();
-    document.getElementById("link").href = 'https://whatsonchain.com/address/'+addr;
+    document.getElementById("link").href = 'https://zhangweis.github.io/#'+addr;
 
     document.getElementById("link").innerHTML = addr;
 }
