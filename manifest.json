@@ -1,0 +1,20 @@
+{
+  "name": "A Getting Started Example",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "background": {
+    "scripts": ["bsv.min.js","bsv-message.min.js","background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+"options_page": "options.html",
+"permissions": [
+    "storage"
+],
+  "manifest_version": 2
+}
