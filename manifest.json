@@ -1,11 +1,14 @@
 {
-  "name": "AuthorIdentity",
-  "version": "1.0",
-  "description": "Add AuthorIdentity for MoneyButton!",
+  "name": "AuthorIdentify",
+  "version": "0.0.0.1",
+  "description": "Add AuthorIdentity to money button for B:// file upload!",
   "background": {
     "scripts": ["bsv.min.js","bsv-message.min.js","background.js"],
     "persistent": false
   },
+  "icons": { "16": "icon16.png",
+   "48": "icon48.png",
+  "128": "icon128.png" },
   "content_scripts": [
     {
       "matches": ["https://*/*"],
