@@ -14,7 +14,7 @@ myScript.innerHTML = '('+function () {
                 window.postMessage({type:'FROM_PAGE_TO_CONTENT_SCRIPT',action:'sign',script: arguments[1].outputs[0].script, serial:serial++}, '*');
             }
         }
-    }, 10);
+    }, 100);
     setTimeout(()=>{clearInterval(interval)},10000);
 window.addEventListener("message", function(event) {
     console.log(event.data, event.source == window)
