@@ -28,9 +28,10 @@ function(request, sender, sendResponse) {
  signingAddr = ' ' + result;
  const signature = bsvMessage(scriptAsm.toBuffer())._sign(privKey).toCompact();
  sigStr = ' '+ signature.toString('hex');
- sigStr += ' '+ toHex(scriptAsm.chunks.length)+ ' '+ toHex(scriptAsm.chunks.length);
+  // protocol changes which removes field offset and field count
+  // sigStr += ' '+ toHex(scriptAsm.chunks.length)+ ' '+ toHex(scriptAsm.chunks.length);
  for (var i = 0; i<scriptAsm.chunks.length;i++) {
-     sigStr += ' '+toHex(i);
+     sigStr += ' '+toHex(i+1);
  }
  append = ' 7c 313550636948473232534e4c514a584d6f5355615756693757537163376843667661 424954434f494e5f4543445341'+signingAddr+'' +sigStr;
  sendResponse({appendScript:append});
